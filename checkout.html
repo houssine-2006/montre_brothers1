@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luxury Checkout - brothers.shop</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      max-width: 650px;
+      margin: 0 auto;
+      padding: 30px;
+      color: #333;
+      background-color: #fafafa;
+      border: 1px solid #e1e1e1;
+      box-shadow: 0 0 20px rgba(77, 69, 179, 0.05);
+    }
+    .luxury-header {
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #e1e1e1;
+      padding-bottom: 20px;
+    }
+    .luxury-logo {
+      font-size: 24px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      color: #684bdc;
+      margin-bottom: 5px;
+    }
+    .product-section {
+      margin: 30px 0;
+      padding: 25px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(17, 13, 21, 0.03);
+      border: 1px solid #eee;
+    }
+    .product-title {
+      font-size: 20px;
+      color: #281168;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+    .product-price {
+      font-size: 24px;
+      color: #3b3b8b
+      font-weight: bold;
+      margin: 15px 0;
+    }
+    .benefits-section {
+      background: #f8f5f0;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 25px 0;
+    }
+    .benefit-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .benefit-icon {
+      margin-right: 10px;
+      color: #927bbe;
+      font-size: 18px;
+    }
+    .form-section {
+      margin: 30px 0;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #555;
+    }
+    .form-input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #694eb3;
+      border-radius: 4px;
+      font-size: 16px;
+      transition: all 0.3s;
+    }
+    .form-input:focus {
+      border-color: #2a3055;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(184,159,123,0.2);
+    }
+    .total-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 30px 0;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+    .total-amount {
+      font-size: 24px;
+      font-weight: bold;
+      color: #7b6acb;
+    }
+    .checkout-btn {
+      background: linear-gradient(to right, #0a1644, #190b41);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+    }
+    .checkout-btn:hover {
+      background: linear-gradient(to right, #a58e6b, #c4a97d);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(184,159,123,0.3);
+    }
+    .gift-option {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+    }
+    .gift-checkbox {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="luxury-header">
+    <div class="luxury-logo">BROTHERS</div>
+    <div>Parfumerie.shop</div>
+  </div>
+
+  <div class="product-section">
+    <div class="product-title">Montre Perpetual Bleu - Édition Luxe</div>
+    <p>Montre automatique avec cadran bleu saphir et bracelet en cuir italien</p>
+    <div class="product-price">1 × 1,249 DH</div>
+
+    <div class="gift-option">
+      <input type="checkbox" id="gift" class="gift-checkbox" name="Emballage cadeau" value="Oui">
+      <label for="gift">Emballage cadeau premium (+99 DH)</label>
+    </div>
+  </div>
+
+  <div class="benefits-section">
+    <h3>Vos avantages exclusifs :</h3>
+    <div class="benefit-item"><span class="benefit-icon">🎁</span><span>Livraison express gratuite (24-48h)</span></div>
+    <div class="benefit-item"><span class="benefit-icon">💎</span><span>Certificat d'authenticité inclus</span></div>
+    <div class="benefit-item"><span class="benefit-icon">🛡</span><span>Garantie internationale 3 ans</span></div>
+    <div class="benefit-item"><span class="benefit-icon">✨</span><span>Service de gravure personnalisée</span></div>
+  </div>
+
+  <form id="orderForm" class="form-section" action="https://formspree.io/f/moveoayq" method="POST">
+    <div class="form-group">
+      <label class="form-label">Nom complet *</label>
+      <input type="text" class="form-input" name="Nom complet" required />
+    </div>
+    <div class="form-group">
+      <label class="form-label">Téléphone *</label>
+      <input type="tel" class="form-input" name="Téléphone" required />
+    </div>
+    <div class="form-group">
+      <label class="form-label">Ville *</label>
+      <input type="text" class="form-input" name="Ville" required />
+    </div>
+
+    <h3>Méthode de paiement</h3>
+    <div class="form-group">
+      <input type="radio" name="Méthode de paiement" value="Carte bancaire" required /> Carte bancaire<br />
+      <input type="radio" name="Méthode de paiement" value="Paiement mobile" /> Paiement mobile<br />
+      <input type="radio" name="Méthode de paiement" value="À la livraison" /> À la livraison
+    </div>
+
+    <input type="hidden" name="perfume-name" value="Montre Perpetual Bleu - 1,249 DH" />
+    <input type="hidden" name="_redirect" value="https://luxmontre.shop/merci.html" />
+
+    <div class="total-section">
+      <div>Total</div>
+      <div class="total-amount">0</div>
+    </div>
+
+    <button class="checkout-btn" type="submit">Finaliser la commande</button>
+  </form>
+</body>
+</html>
